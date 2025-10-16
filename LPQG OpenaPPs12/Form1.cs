@@ -24,7 +24,7 @@ namespace LPQG_OpenaPPs12
         public Form1()
         {
             InitializeComponent();
-            label4.Hide();
+            button3.Hide();
             
         }
 
@@ -62,8 +62,8 @@ namespace LPQG_OpenaPPs12
                     string exe;
                     exe = op.FileName;
                     
-                    label4.Show();
-                    { label4.Text = selectedapp; label4.Refresh(); }
+                    
+                    { textBox2.Text = selectedapp; textBox2.Refresh(); button3.Show(); ; }
                     MessageBox.Show(" App Selected!",
                                     "Open", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -120,9 +120,18 @@ namespace LPQG_OpenaPPs12
                     MessageBox.Show("App started as Administrator with arguments: " + Argumentation,
                                     "LQPG App Opener", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Win32Exception)
+                catch (System.ComponentModel.Win32Exception ex)
                 {
-                    
+                    if (ex.NativeErrorCode == 740) // ERROR_ELEVATION_REQUIRED
+                    {
+                        MessageBox.Show("This app requires administrator privileges by default please checked the 'Administrator' checkbox to run the app.",
+                                        "Admin Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        throw;
+                    }
+
                 }
             }
 
@@ -141,10 +150,7 @@ namespace LPQG_OpenaPPs12
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -156,6 +162,9 @@ namespace LPQG_OpenaPPs12
 
         }
 
-        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
