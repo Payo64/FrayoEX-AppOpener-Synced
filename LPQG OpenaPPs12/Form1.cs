@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 
 namespace LPQG_OpenaPPs12
 {
@@ -164,6 +165,57 @@ namespace LPQG_OpenaPPs12
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void enableDarkModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(25, 25, 25);
+            label1.ForeColor = Color.White;
+            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.White;
+            checkBox1.ForeColor = Color.White;
+            button3.BackColor = Color.Black;
+            button3.ForeColor = Color.FromArgb(240, 240, 240);
+            button2.BackColor = Color.Black;
+            button2.ForeColor = Color.FromArgb(240, 240, 240);
+            button1.BackColor = Color.Black;
+            button1.ForeColor = Color.FromArgb(240, 240, 240);
+            textBox1.BackColor = Color.Black;
+            textBox1.ForeColor = Color.FromArgb(240, 240, 240);
+            textBox2.BackColor = Color.Black;
+            textBox2.ForeColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void enableLightModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(240, 240, 240);
+            label1.ForeColor = Color.Black;
+            label2.ForeColor = Color.Black;
+            button2.ForeColor = Color.Black;
+            checkBox1.ForeColor = Color.Black;
+            button3.BackColor = Color.White;
+            button3.ForeColor = Color.FromArgb(25, 25, 25);
+            button2.BackColor = Color.White;
+            button2.ForeColor = Color.FromArgb(25, 25, 25);
+            button1.BackColor = Color.White;
+            button1.ForeColor = Color.FromArgb(25, 25, 25);
+            textBox1.BackColor = Color.White;
+            textBox1.ForeColor = Color.FromArgb(25, 25, 25);
+            textBox2.BackColor = Color.White;
+            textBox2.ForeColor = Color.FromArgb(25, 25, 25);
+        }
+
+        private void heToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();  // create a new instance of Form2
+            form2.Show();               // open it (non-blocking)
+
             
         }
     }
