@@ -9,4 +9,4 @@ So i can sync my project with my visual studio 2022 app
 
 If you want to see the original repo:
 
-<a href="https://www.example.com">Click here</a>
+<a href="https://github.com/Payo64/FrayoEX-AppOpener">Click here</a>
