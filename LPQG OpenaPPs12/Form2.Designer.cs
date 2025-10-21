@@ -76,7 +76,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Version: 1.2.0";
+            this.label1.Text = "Version: 1.2.1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button3
             // 
@@ -99,8 +100,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form2";
-            this.Text = " ";
+            this.Text = " About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
