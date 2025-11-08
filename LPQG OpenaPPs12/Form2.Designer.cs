@@ -76,7 +76,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Version: 1.2.1";
+            this.label1.Text = "Version: 1.2.2";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button3
